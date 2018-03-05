@@ -22,13 +22,13 @@ The container ends up being around 2.4GB. DockerHub should be the quickest metho
 ## Using it from Docker Hub
 
 ### Links
-(Docker Hub repo)[https://hub.docker.com/r/mickmake/AtmelASF/]
+(Docker Hub repo)[https://hub.docker.com/r/mickmake/debian-asf/]
 
-(Docker Cloud repo)[https://cloud.docker.com/swarm/mickmake/repository/docker/mickmake/AtmelASF/]
+(Docker Cloud repo)[https://cloud.docker.com/swarm/mickmake/repository/docker/mickmake/debian-asf/]
 
 
 ### Setup from Docker Hub
-A simple `docker pull mickmake/AtmelASF` will pull down the latest version.
+A simple `docker pull mickmake/debian-asf` will pull down the latest version.
 
 
 ### Runtime from Docker Hub

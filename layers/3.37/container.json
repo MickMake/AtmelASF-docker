@@ -1,0 +1,14 @@
+{
+	"project": "mickmake",
+	"name": "debian-asf",
+	"version": "3.37",
+	"majorversion": "",
+	"latest": "1",
+	"network": "",
+	"ports": "",
+	"volumes": "-v \"$PWD\":/home/build",
+	"restart": "--restart no",
+	"args": "",
+	"env": "VERSION"
+}
+

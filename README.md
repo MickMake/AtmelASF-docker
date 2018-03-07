@@ -6,9 +6,9 @@ This repository provides you with a full development environment supporting [ASF
 
 
 ## Supported tags and respective Dockerfiles
-`3.37`, `latest` _([3.37/Dockerfile](https://github.com/mickmake/AtmelASF-docker/blob/master/full/3.37/Dockerfile))_
+`3.37`, `latest` _([3.37/Dockerfile](https://github.com/mickmakes/AtmelASF-docker/blob/master/full/3.37/Dockerfile))_
 
-`3.37`, `latest` _([3.37/Dockerfile](https://github.com/mickmake/AtmelASF-docker/blob/master/layers/3.37/Dockerfile))_
+`3.37`, `latest` _([3.37/Dockerfile](https://github.com/mickmakes/AtmelASF-docker/blob/master/layers/3.37/Dockerfile))_
 
 
 
@@ -62,13 +62,13 @@ rm - Remove the Docker container. Not needed if you use the `-i -t` flags.
 ### Setup from GitHub repo
 Simply clone this repository to your local machine
 
-`git clone https://github.com/mickmake/AtmelASF-docker.git`
+`git clone https://github.com/mickmakes/AtmelASF-docker.git`
 
 
 ### Building from GitHub repo
 You have two build choices:
-1. [Using a layered approach](https://github.com/mickmake/AtmelASF-docker/blob/master/full/) - This will allow you to build on top of other base containers, such as Debian, Alpine, etc.
-2. [All-in-one](https://github.com/mickmake/AtmelASF-docker/blob/master/layers/) - Will build straight from the O/S reference container.
+1. [Using a layered approach](https://github.com/mickmakes/AtmelASF-docker/blob/master/full/) - This will allow you to build on top of other base containers, such as Debian, Alpine, etc.
+2. [All-in-one](https://github.com/mickmakes/AtmelASF-docker/blob/master/layers/) - Will build straight from the O/S reference container.
 
 
 `make build` - Build Docker images. Build all versions from the base directory or specific versions from each directory.

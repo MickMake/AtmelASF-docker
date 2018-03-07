@@ -7,7 +7,7 @@ This repository provides you with a full development environment supporting [ASF
 
 ## Quick Start (for the impatient)
 
-Pull down the GitHub repo and build. This make take a while. It ends up being around 2.4GB.
+Pull down the GitHub repo and build. This may take a while as it ends up being around 2.4GB.
 ```
 git clone https://github.com/mickmake/AtmelASF-docker.git
 cd AtmelASF-docker/full

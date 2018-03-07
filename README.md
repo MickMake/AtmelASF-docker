@@ -26,9 +26,9 @@ docker run --rm -i -t -v "$PWD":/home/build mickmake/debian-asf:3.37 make
 
 
 ## Supported tags and respective Dockerfiles
-`3.37`, `latest` _([3.37/Dockerfile](https://github.com/mickmakes/AtmelASF-docker/blob/master/full/3.37/Dockerfile))_
+`3.37`, `latest` _([3.37/Dockerfile](https://github.com/mickmakes/AtmelASF-docker/blob/master/full/3.37/Dockerfile))_ - full build
 
-`3.37`, `latest` _([3.37/Dockerfile](https://github.com/mickmakes/AtmelASF-docker/blob/master/layers/3.37/Dockerfile))_
+`3.37`, `latest` _([3.37/Dockerfile](https://github.com/mickmakes/AtmelASF-docker/blob/master/layers/3.37/Dockerfile))_ - using layers
 
 
 

@@ -5,6 +5,26 @@
 This repository provides you with a full development environment supporting [ASF](http://asf.atmel.com/docs/latest/) within a Docker container. It currently provides version 3.37 of ASF.
 
 
+## Quick Start (for the impatient)
+
+Pull down the GitHub repo and build. This make take a while. It ends up being around 2.4GB.
+```
+git clone https://github.com/mickmake/AtmelASF-docker.git
+cd AtmelASF-docker/full
+make build
+```
+
+Then run a shell within that container:
+
+`make shell`
+
+Or change directory to your source tree and compile using 'make':
+```
+cd /some/dir/on/your/pc
+docker run --rm -i -t -v "$PWD":/home/build mickmake/debian-asf:3.37 make
+```
+
+
 ## Supported tags and respective Dockerfiles
 `3.37`, `latest` _([3.37/Dockerfile](https://github.com/mickmakes/AtmelASF-docker/blob/master/full/3.37/Dockerfile))_
 

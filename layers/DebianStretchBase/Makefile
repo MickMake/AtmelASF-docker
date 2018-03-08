@@ -1,5 +1,5 @@
 #
-# Standard version level Makefile used to build a Docker container for WPLib - https://github.com/wplib/wplib-box/
+# Standard version level Makefile used to build a Docker container for MickMake projects.
 #
 
 

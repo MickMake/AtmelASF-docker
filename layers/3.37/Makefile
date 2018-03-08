@@ -1,5 +1,5 @@
 #
-# Standard version level Makefile used to build a Docker container for WPLib - https://github.com/wplib/wplib-box/
+# Standard version level Makefile used to build a Docker container for MickMake projects.
 #
 
 
@@ -52,7 +52,7 @@ default: build
 
 build: Dockerfile
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	-docker build -t $(IMAGE_NAME):$(VERSION) --build-arg $(ENV)=$(VERSION) .
 ifneq ($(MAJORVERSION),)
@@ -66,7 +66,7 @@ endif
 
 push:
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	-docker push $(IMAGE_NAME):$(VERSION)
 ifneq ($(MAJORVERSION),)
@@ -80,7 +80,7 @@ endif
 
 release: build
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	make push -e VERSION=$(VERSION)
 endif
@@ -88,7 +88,7 @@ endif
 
 clean:
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	docker image rm $(IMAGE_NAME):$(VERSION)
 ifneq ($(MAJORVERSION),)
@@ -102,7 +102,7 @@ endif
 
 list:
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	docker image ls $(IMAGE_NAME):$(VERSION)
 ifneq ($(MAJORVERSION),)
@@ -120,7 +120,7 @@ endif
 
 test:
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	make stop
 	make rm
@@ -132,42 +132,42 @@ endif
 
 shell:
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	docker run --rm --name $(CONTAINER_NAME)-shell -i -t $(NETWORK) $(PORTS) $(ARGS) $(VOLUMES) $(IMAGE_NAME):$(VERSION) /bin/bash
 endif
 
 run:
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	docker run --rm --name $(CONTAINER_NAME)             $(NETWORK) $(PORTS) $(ARGS) $(VOLUMES) $(IMAGE_NAME):$(VERSION)
 endif
 
 create:
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	docker create   --name $(CONTAINER_NAME) $(RESTART)  $(NETWORK) $(PORTS) $(ARGS) $(VOLUMES) $(IMAGE_NAME):$(VERSION)
 endif
 
 start:
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	docker start $(CONTAINER_NAME)
 endif
 
 stop:
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	docker stop $(CONTAINER_NAME)
 endif
 
 rm:
 ifeq ($(PROJECT),)
-	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+	@echo "MickMake: ERROR - You need to install JQ or NodeJS."
 else
 	docker container rm $(CONTAINER_NAME)
 endif

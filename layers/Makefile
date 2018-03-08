@@ -1,5 +1,5 @@
 #
-# Standard top level Makefile used to build a Docker container for WPLib - https://github.com/wplib/wplib-box/
+# Standard top level Makefile used to build a Docker container for MickMake projects.
 # 
 
 VERSIONS = DebianStretchBase 3.37
